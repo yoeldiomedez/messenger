@@ -83,6 +83,9 @@
                 <div class="title m-b-md">
                     {{ config('app.name', 'Laravel') }}
                 </div>
+                <div class="links">
+                    
+                </div>
             </div>
         </div>
     </body>
