@@ -19,9 +19,15 @@ class MessageController extends Controller
             'created_at', 
             'content'
         )->where(function ($query) use ($user_id, $contact_id) {
-            $query->where('from_id', $user_id)->where('to_id', $contact_id);
+
+            $query->where('from_id', $user_id)
+                  ->where('to_id', $contact_id);
+
         })->orWhere(function ($query) use ($user_id, $contact_id) {
-            $query->where('from_id', $contact_id)->where('to_id', $user_id);
+
+            $query->where('from_id', $contact_id)
+                  ->where('to_id', $user_id);
+
         })->get();
     }
 

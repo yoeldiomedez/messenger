@@ -15,8 +15,8 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('from_id');
-            $table->unsignedBigInteger('to_id');
+            $table->unsignedInteger('from_id');
+            $table->unsignedInteger('to_id');
             $table->text('content');
             $table->foreign('from_id')->references('id')->on('users');
             $table->foreign('to_id')->references('id')->on('users');

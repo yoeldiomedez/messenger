@@ -84,7 +84,8 @@
                     {{ config('app.name', 'Laravel') }}
                 </div>
                 <div class="links">
-                    
+                    <a href="https://yoeldiomedez.github.io/" target="_blank">Author</a>
+                    <a href="https://github.com/YoelDiomedez/messenger" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
