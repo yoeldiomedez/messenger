@@ -15,7 +15,8 @@ class MessageController extends Controller
 
         return Message::select(
             'id', 
-            DB::raw("IF(`from_id`=$user_id, TRUE, FALSE) as written_by_me"), 
+            // DB::raw("IF(`from_id`=$user_id , TRUE, FALSE) as written_by_me") // MySQL
+            DB::raw("(CASE WHEN (from_id = $user_id) THEN '1' ELSE '0' END) as written_by_me"), // pgSQL IF statement not supported
             'created_at', 
             'content'
         )->where(function ($query) use ($user_id, $contact_id) {
