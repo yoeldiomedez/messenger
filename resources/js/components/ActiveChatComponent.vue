@@ -82,7 +82,8 @@
                 return this.$store.state.selectedChat
             },
             myPicture() {
-                return `/users/${this.$store.state.user.picture}`
+                // return `/users/${this.$store.state.user.picture}`
+                return this.$store.state.user.picture
             },
         },
         updated() {

@@ -1845,7 +1845,8 @@ __webpack_require__.r(__webpack_exports__);
       return this.$store.state.selectedChat;
     },
     myPicture: function myPicture() {
-      return "/users/".concat(this.$store.state.user.picture);
+      // return `/users/${this.$store.state.user.picture}`
+      return this.$store.state.user.picture;
     }
   },
   updated: function updated() {
@@ -2142,7 +2143,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     picture: function picture() {
-      return "/users/".concat(this.user.picture);
+      // return `/users/${this.user.picture}`
+      return this.user.picture;
     }
   }
 });
@@ -54644,7 +54646,8 @@ var render = function() {
                       _c("b-form-file", {
                         attrs: {
                           name: "picture",
-                          accept: ".jpg, .jpeg, .png, .gif"
+                          accept: ".jpg, .jpeg, .png, .gif",
+                          disabled: ""
                         }
                       })
                     ],
@@ -68584,7 +68587,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Projects\Web\messenger\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Projects\xampp\htdocs\platica\resources\js\app.js */"./resources/js/app.js");
 
 
 /***/ })

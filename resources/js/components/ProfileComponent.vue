@@ -42,7 +42,7 @@
                         <b-form-file
                         name="picture"
                         accept=".jpg, .jpeg, .png, .gif"
-                        />
+                        disabled/>
                     </b-form-group>
                     
                     <b-button type="submit" variant="primary">Submit</b-button>
@@ -65,7 +65,8 @@
     },
     computed: {
       picture() {
-          return `/users/${this.user.picture}`
+        // return `/users/${this.user.picture}`
+        return this.user.picture
       }
     }
   }

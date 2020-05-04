@@ -10,7 +10,8 @@ class Chat extends Model
 
     public function getContactPictureAttribute()
     {
-        return "/users/" . $this->contact()->first(['picture'])->picture;
+        // return "/users/" . $this->contact()->first(['picture'])->picture;
+        return $this->contact()->first(['picture'])->picture;
     }    
     
     public function getContactNameAttribute()
