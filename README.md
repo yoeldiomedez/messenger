@@ -1,5 +1,5 @@
 # Messenger
-Chat en tiempo real con Laravel + Pusher + Vuex
+Chat en tiempo real con Laravel + Pusher + Vuex -> [Live Demo](https://platica.herokuapp.com)
 
 ## Requerimiento para Despliegue
 
